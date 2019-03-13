@@ -157,7 +157,7 @@ ggsave("stephen-curry-shot-chart.pdf",
 
 ggsave("stephen-curry-shot-chart.png", 
        plot = curry_shot_chart, 
-       device = "pdf", 
+       device = "png", 
        path = "/Users/nishantmishra/workout01/images/",
        scale = 1,
        width = 6.5,

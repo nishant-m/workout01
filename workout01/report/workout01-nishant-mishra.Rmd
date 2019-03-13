@@ -142,10 +142,63 @@ summarise(durant,
 ```
 Here, analysis of Durant's tendencies only continues to support our ideas that he is an all-time-great. Like Draymond, he takes a very large amount of jump shots, which we can most likely attribute to being the way the offense of Golden State runs as well as a benefit of having so many offensive superstars on one team. The rest of his tendencies, however, are where we can recognize his greatness. With a very large number of pull up jump shots, Durant still manages to shoot 60.65% from 2 pointers and 38.60% from 3 - both incredible numbers for the volume and difficulty of the shots he takes. Considering the numbers of his fadeaway jump shots, driving layup shots, and running layup shots, his tendencies can be observed to be similar to that of a guard, and something that defenders must remain wary of.
 
+
+### Andre Iguodala
+![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2386.png&w=350&h=254)
+
+One of the league's oldest veterans and a former superstar on the Philadelphia 76ers, Andre Iguodala has figured out his role on the Warriors as one of their key wing defenders as well as one of their athletic scoring threats when all other options fail. It is worth noting that Iguodala has by far the smallest load on the offensive end due to his role primarily being that of a defender and playmaker. Below, we take a look at his shot chart as well as his shot tendencies.
+
+![](https://github.com/nishant-m/workout01/blob/master/workout01/images/andre-iguodala-shot-chart.png?raw=true)
+
+```{r}
+summarise(iguodala, 
+          Jump_Shots = nrow(filter(iguodala, action_type == "Jump Shot")),
+          Pullup_Jump_Shots = nrow(filter(iguodala, action_type == "Pullup Jump shot")),
+          Running_Layup_Shot = nrow(filter(iguodala, action_type == "Running Layup Shot")),
+          Running_Dunk_Shot = nrow(filter(iguodala, action_type == "Running Dunk Shot")),
+          Layup_Shots = nrow(filter(iguodala, action_type == "Layup Shot")),
+          Cutting_Dunk_Shots = nrow(filter(iguodala, action_type == "Cutting Dunk Shot")))
+```
+
+Looking at Iguodala's tendencies, his position as a role player becomes clear. Once again, the Warriors are a great jump shooting team, and Iguodala's large volume of jump shots most likely occurs, once again, as a result of him being open and a capable jump shooter. His effective 2PT shooting percentage of 63.81% suggests that the shots he takes are often relatively easier shots as well as the fact that he is able to convert on a significant amount of his attempts. Looking at the number of attempts of all his other attempts (all below 35), it becomes clear that Iguodala truly is a role player on offense that focuses on cutting, mainly through backdoor cuts and movements of the offense that allow him to get high percentage shots or dish out to an open teammate. 
+
+
+### Klay Thompson
+![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6475.png&w=350&h=254)
+
+A 7 year veteran in the NBA, Klay Thompson is one of the best three point shooters to ever play the game of basketball. Interestingly, he is likely only eclipsed by his superstar teammate that we consider right after this, Stephen Curry. His 3PT % for the volume at which he takes 3's is ridiculous - 42.41% with a 580 attempts on the season is unprecedented, and his ability beyond the arc has quite literally caused NBA teams to change their entire game plans. Klay isn't a one trick pony, however, as he often has the task of guarding the opposing team's best player, due to his ability as a wing defender and his stamina that allows him to remain a threat on offense even after such tiring assignments. Klay has the ability to go nuclear, and holds the record for points in a quarter - 37. Below, we consider his shot chart as well as his shot tendencies.
+
+![](https://github.com/nishant-m/workout01/blob/master/workout01/images/klay-thompson-shot-chart.png?raw=true)
+
+```{r}
+summarise(thompson, 
+          Jump_Shots = nrow(filter(thompson, action_type == "Jump Shot")),
+          Pullup_Jump_Shots = nrow(filter(thompson, action_type == "Pullup Jump shot")),
+          Cutting_Layup_Shot = nrow(filter(thompson, action_type == "Cutting Layup Shot")),
+          Layup_Shots = nrow(filter(thompson, action_type == "Layup Shot")),
+          Step_Back_Jump_Shot = nrow(filter(thompson, action_type == "Step Back Jump shot")),
+          Driving_Layup_Shot = nrow(filter(thompson, action_type == "Driving Layup Shot")))
+```
+
+A look at Thompson's tendencies help us unpack his offensive prowess. He takes a significant amount of jump shots - 688 standing and 171 pullups - on the season, which is substantially more than any other type of shot he takes. He cuts and drives to the basket occasionally for layups, but the vast majority of his points come from his ability on the perimeter, something defenders have to remain cautious of. It is also worth noting he takes more step back jump shots than driving layup shots, suggesting when he does hesitation dribble moves, defenders should fan out to the wings and contest the shots rather than stay back, assuming there is a help defender under the basket to help them out.
+
+
+### Stephen Curry
+![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&w=350&h=254)
+
+A 9 year veteran in the league, Stephen Curry is one of the all time NBA greats. The first unanimous MVP ever, he has proven all doubters wrong. Entering the league, he was often shunned for being too small, too slow, not strong enough of a ball handler, too short, and too injury prone. While ankle injuries certainly plagued him for the first few years of his career, he has undoubtedly proven every one of his naysayers wrong and has risen to the ranks of the best ever. He absolutely smashed the 3 point record in an NBA season and he is the reason Golden State has been amazing in recent years. From breaking the single season win record to currently being on the path to a three-peat, Curry runs the offense of the Warriors with his insane gravity - defenders absolutely cannot ignore him due to his deadly three point shooting (which, in turn, leads to even deadlier finishing at the rim), ball handling ability, and vision as a playmaker. Let us consider his shot chart and his top shooting tendencies.
+
+
+
+
 ### Sources
 http://www.espn.com/nba/player/_/id/6589/draymond-green
+
 http://www.espn.com/nba/player/_/id/3202/kevin-durant
 
+http://www.espn.com/nba/player/_/id/2386/andre-iguodala
+
+http://www.espn.com/nba/player/_/id/6475/klay-thompson
 
 
 
