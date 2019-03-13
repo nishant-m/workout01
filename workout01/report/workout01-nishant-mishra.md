@@ -141,6 +141,37 @@ summarise(thompson,
 
 A look at Thompson's tendencies help us unpack his offensive prowess. He takes a significant amount of jump shots - 688 standing and 171 pullups - on the season, which is substantially more than any other type of shot he takes. He cuts and drives to the basket occasionally for layups, but the vast majority of his points come from his ability on the perimeter, something defenders have to remain cautious of. It is also worth noting he takes more step back jump shots than driving layup shots, suggesting when he does hesitation dribble moves, defenders should fan out to the wings and contest the shots rather than stay back, assuming there is a help defender under the basket to help them out.
 
+### Stephen Curry
+
+![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&w=350&h=254)
+
+A 9 year veteran in the league, Stephen Curry is one of the all time NBA greats. The first unanimous MVP ever, he has proven all doubters wrong. Entering the league, he was often shunned for being too small, too slow, not strong enough of a ball handler, too short, and too injury prone. While ankle injuries certainly plagued him for the first few years of his career, he has undoubtedly proven every one of his naysayers wrong and has risen to the ranks of the best ever. He absolutely smashed the 3 point record in an NBA season and he is the reason Golden State has been amazing in recent years. From breaking the single season win record to currently being on the path to a three-peat, Curry runs the offense of the Warriors with his insane gravity - defenders absolutely cannot ignore him due to his deadly three point shooting (which, in turn, leads to even deadlier finishing at the rim), ball handling ability, and vision as a playmaker. Let us consider his shot chart and his top shooting tendencies.
+
+![](https://github.com/nishant-m/workout01/blob/master/workout01/images/stephen-curry-shot-chart.png?raw=true)
+
+``` r
+summarise(curry, 
+          Jump_Shots = nrow(filter(curry, action_type == "Jump Shot")),
+          Pullup_Jump_Shots = nrow(filter(curry, action_type == "Pullup Jump shot")),
+          Step_Back_Jump_Shot = nrow(filter(curry, action_type == "Step Back Jump shot")),
+          Layup_Shots = nrow(filter(curry, action_type == "Layup Shot")),
+          Driving_Layup_Shot = nrow(filter(thompson, action_type == "Driving Layup Shot")),
+          Floating_Jump_Shot = nrow(filter(curry, action_type == "Floating Jump shot")))
+```
+
+    ##   Jump_Shots Pullup_Jump_Shots Step_Back_Jump_Shot Layup_Shots
+    ## 1        596               158                  75          60
+    ##   Driving_Layup_Shot Floating_Jump_Shot
+    ## 1                 33                 36
+
+While Curry's versatility as a playmaker stems from his jump shooting ability, there is little that can be done about that. He takes a significant amount more jump shots than anything else, even more so than Klay - 596 jumpers, 158 pullups, and 75 step backs - on the season. His layup arsenal, too, is dangerous - from normal layups to attacking drives to floaters, he can hit defenders in a number of ways to render their defense useless, raising questions as to how we could possibly stop him.
+
+### How Do We Stop Them?
+
+In short, we almost definitely could not. If the best players in the NBA can't stop the Warriors' starting five, it is unlikely that a pickup team at the RSF would be able to. But, with some smart game planning, we could, hopefully, and with a good amount of luck, slow them down. Going in order, we can look at their shot tendencies and what we should do to attack them on defense to hinder their ability to amass points in seconds.
+
+First, with Draymond,
+
 ### Sources
 
 <http://www.espn.com/nba/player/_/id/6589/draymond-green>
