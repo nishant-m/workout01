@@ -42,9 +42,24 @@ It is easy to look at the numbers behind the five starters of the Golden State W
 
 ![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6589.png&w=350&h=254)
 
-A veteran of 6 years, Green is without a doubt the heart and soul of this Warriors team. He consistently plays at a Defensive Player of the Year level, and the team undoubtedbly runs through him. But how good is he on offense? Breaking his shot chart down,
+A veteran of 6 years, Green is without a doubt the heart and soul of this Warriors team. He consistently plays at a Defensive Player of the Year level, and the team undoubtedbly runs through him. But how good is he on offense? Below, we can take a look at his shot chart.
 
-<embed src="draymond-green-shot-chart.pdf" width="80%" style="display: block; margin: auto;" type="application/pdf" />
+![](https://github.com/nishant-m/workout01/blob/master/workout01/images/draymond-green-shot-chart.png?raw=true)
+
+``` r
+summarise(green, 
+          Jump_Shots = nrow(filter(green, action_type == "Jump Shot")),
+          Layup_Shots = nrow(filter(green, action_type == "Layup Shot")),
+          Pullup_Jump_Shots = nrow(filter(green, action_type == "Pullup Jump shot")),
+          Tip_Layup_Shots = nrow(filter(green, action_type == "Tip Layup Shot")),
+          Cutting_Dunk_Shot = nrow(filter(green, action_type == "Cutting Dunk Shot")))
+```
+
+    ##   Jump_Shots Layup_Shots Pullup_Jump_Shots Tip_Layup_Shots
+    ## 1        240          59                44              26
+    ##   Cutting_Dunk_Shot
+    ## 1                22
+
 ### Sources
 
 <http://www.espn.com/nba/player/_/id/6589/draymond-green>

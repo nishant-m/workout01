@@ -35,18 +35,6 @@ green_3pt
 green_3pt_made = nrow(filter(green, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
 green_3pt_made
 
-# Green
-green = filter(data, name == "Draymond Green")
-summary(green)
-green_2pt = nrow(filter(green, shot_type == "2PT Field Goal"))
-green_2pt
-green_2pt_made = nrow(filter(green, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
-green_2pt_made
-green_3pt = nrow(filter(green, shot_type == "3PT Field Goal"))
-green_3pt
-green_3pt_made = nrow(filter(green, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
-green_3pt_made
-
 # Durant
 durant = filter(data, name == "Kevin Durant")
 summary(durant)
@@ -113,18 +101,27 @@ Andre Iguodala | 371 | 192 | 51.75
 Klay Thompson | 1220 | 575 | 47.13
 Stephen Curry | 1250 | 584 | 46.72
 
-# The Most Effective Offensive Player on the Golden State Warriors in 2016
+# The Tendencies of the All-Time-Great Golden State Warriors of 2016
 
-It is easy to look at the numbers behind the five starters of the Golden State Warriors and arrive at a simplistic conclusion regarding who the most potent player on offense was. While we do not have access to information relating to the gravity of a player - the willingness of defenders and help defenders to stick to the mentioned player thus leaving teammates open, often dubbed "gravity" - we do have access to relatively detailed information regarding each of Golden State's starters that will help us analyze who the most potent offensive player is. If nothing else, we will be able to break down the offenses that each of these players can run and what they're good at on a case-by-case basis.
+It is easy to look at the numbers behind the five starters of the Golden State Warriors and arrive at a simplistic conclusion regarding their greatness on offense. With two (if we are being conservative and not including Durant) of the best three-point shooters of all time on the team, their shooting, undoubtedly, plays a key role in their success. But what about everything else? What are the other tendencies of the players on the Warriors on offense? What do they do tend to do? If we were to gameplan to play against the Warriors, what should we look out for? The purpsoe of this article is exactly that - to look at the tendencies of each of the players on the starting five of the Golden State Warriors, and ultimately, to gameplan for how a team of pickup players could possibly stop this offensive juggernaut the likes of which we have never seen and will likely never see again.
 
 ### Draymond Green
 ![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6589.png&w=350&h=254)
 
-A veteran of 6 years, Green is without a doubt the heart and soul of this Warriors team. He consistently plays at a Defensive Player of the Year level, and the team undoubtedbly runs through him. But how good is he on offense? Breaking his shot chart down, 
+A veteran of 6 years, Green is without a doubt the heart and soul of this Warriors team. He consistently plays at a Defensive Player of the Year level, and the team undoubtedbly runs through him. But how good is he on offense? Below, we can take a look at his shot chart.
 
-```{r out.width = '80%', echo = FALSE, fig.align = 'center'}
+![](https://github.com/nishant-m/workout01/blob/master/workout01/images/draymond-green-shot-chart.png?raw=true)
+
+
+```{r}
+summarise(green, 
+          Jump_Shots = nrow(filter(green, action_type == "Jump Shot")),
+          Layup_Shots = nrow(filter(green, action_type == "Layup Shot")),
+          Pullup_Jump_Shots = nrow(filter(green, action_type == "Pullup Jump shot")),
+          Tip_Layup_Shots = nrow(filter(green, action_type == "Tip Layup Shot")),
+          Cutting_Dunk_Shot = nrow(filter(green, action_type == "Cutting Dunk Shot")),
 ```
-
+Here, analysis of our data shows the five most common tendencies of Green on offense. He takes a significant amount of jump shots. His low number of layup shots, pullup jump shots, and other shot attempts near the basket suggest that his role on offense is that of a fourth or fifth man. This makes sense with offensive powerhouses on the team like Durant, Curry, and Thompson. While we cannot ascertain this from the data, it is likely that, due to the gravity of these other players on the Warriors, Green often finds himself open on the floor with a clear jump shot, suggesting a possible reason for his very high number of attempted jumpshots.
 
 ### Sources
 http://www.espn.com/nba/player/_/id/6589/draymond-green
