@@ -1,0 +1,117 @@
+---
+title: "workout01-nishant-mishra"
+author: "Nishant Mishra"
+date: "12/03/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(readr)
+
+data = read.csv("/Users/nishantmishra/workout01/data/shots-data.csv")
+
+# Iguodala
+iguodala = filter(data, name == "Andre Iguodala")
+summary(iguodala)
+iguodala_2pt = nrow(filter(iguodala, shot_type == "2PT Field Goal"))
+iguodala_2pt
+iguodala_2pt_made = nrow(filter(iguodala, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
+iguodala_2pt_made
+iguodala_3pt = nrow(filter(iguodala, shot_type == "3PT Field Goal"))
+iguodala_3pt
+iguodala_3pt_made = nrow(filter(iguodala, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
+iguodala_3pt_made
+
+# Green
+green = filter(data, name == "Draymond Green")
+summary(green)
+green_2pt = nrow(filter(green, shot_type == "2PT Field Goal"))
+green_2pt
+green_2pt_made = nrow(filter(green, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
+green_2pt_made
+green_3pt = nrow(filter(green, shot_type == "3PT Field Goal"))
+green_3pt
+green_3pt_made = nrow(filter(green, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
+green_3pt_made
+
+# Green
+green = filter(data, name == "Draymond Green")
+summary(green)
+green_2pt = nrow(filter(green, shot_type == "2PT Field Goal"))
+green_2pt
+green_2pt_made = nrow(filter(green, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
+green_2pt_made
+green_3pt = nrow(filter(green, shot_type == "3PT Field Goal"))
+green_3pt
+green_3pt_made = nrow(filter(green, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
+green_3pt_made
+
+# Durant
+durant = filter(data, name == "Kevin Durant")
+summary(durant)
+durant_2pt = nrow(filter(durant, shot_type == "2PT Field Goal"))
+durant_2pt
+durant_2pt_made = nrow(filter(durant, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
+durant_2pt_made
+durant_3pt = nrow(filter(durant, shot_type == "3PT Field Goal"))
+durant_3pt
+durant_3pt_made = nrow(filter(durant, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
+durant_3pt_made
+
+# Thompson
+thompson = filter(data, name == "Klay Thompson")
+summary(thompson)
+thompson_2pt = nrow(filter(thompson, shot_type == "2PT Field Goal"))
+thompson_2pt
+thompson_2pt_made = nrow(filter(thompson, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
+thompson_2pt_made
+thompson_3pt = nrow(filter(thompson, shot_type == "3PT Field Goal"))
+thompson_3pt
+thompson_3pt_made = nrow(filter(thompson, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
+thompson_3pt_made
+
+# Curry
+curry = filter(data, name == "Stephen Curry")
+summary(curry)
+curry_2pt = nrow(filter(curry, shot_type == "2PT Field Goal"))
+curry_2pt
+curry_2pt_made = nrow(filter(curry, shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"))
+curry_2pt_made
+curry_3pt = nrow(filter(curry, shot_type == "3PT Field Goal"))
+curry_3pt
+curry_3pt_made = nrow(filter(curry, shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"))
+curry_3pt_made
+```
+
+### Effective Shooting % By Player (2PT %)
+Name | Total | Made | % Made
+---  | ------| ---- | ------
+Andre Iguodala | 210 | 134 | 63.81
+Kevin Durant | 643 | 390 | 60.65
+Klay Thompson | 640 | 329 | 51.41
+Stephen Curry | 563 | 304 | 54.00
+Draymond Green | 346 | 171 | 49.42
+
+
+### Effective Shooting % By Player (3PT %)
+Name | Total | Made | % Made
+---  | ------| ---- | ------
+Klay Thompson | 580 | 246 | 42.41
+Stephen Curry | 687 | 280 | 40.76
+Kevin Durant | 272 | 105 | 38.60
+Andre Iguodala | 161 | 58 | 36.02
+Draymond Green | 232 | 74 | 32.00
+
+
+### Effective Shooting % By Player (Total)
+Name | Total | Made | % Made
+---  | ------| ---- | ------
+Draymond Green | 578 | 333 | 57.61
+Kevin Durant | 915 | 495 | 54.10
+Andre Iguodala | 371 | 192 | 51.75
+Klay Thompson | 1220 | 575 | 47.13
+Stephen Curry | 1250 | 584 | 46.72
+
+
+
