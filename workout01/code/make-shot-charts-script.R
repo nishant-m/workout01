@@ -75,9 +75,29 @@ ggsave("andre-iguodala-shot-chart.pdf",
        units = "in",
        dpi = 300)
 
+ggsave("andre-iguodala-shot-chart.png", 
+       plot = iguodala_shot_chart, 
+       device = "png", 
+       path = "/Users/nishantmishra/workout01/images/",
+       scale = 1,
+       width = 6.5,
+       height = 5,
+       units = "in",
+       dpi = 300)
+
 ggsave("draymond-green-shot-chart.pdf", 
        plot = green_shot_chart, 
        device = "pdf", 
+       path = "/Users/nishantmishra/workout01/images/",
+       scale = 1,
+       width = 6.5,
+       height = 5,
+       units = "in",
+       dpi = 300)
+
+ggsave("draymond-green-shot-chart.png", 
+       plot = green_shot_chart, 
+       device = "png", 
        path = "/Users/nishantmishra/workout01/images/",
        scale = 1,
        width = 6.5,
@@ -95,6 +115,16 @@ ggsave("kevin-durant-shot-chart.pdf",
        units = "in",
        dpi = 300)
 
+ggsave("kevin-durant-shot-chart.png", 
+       plot = durant_shot_chart, 
+       device = "png", 
+       path = "/Users/nishantmishra/workout01/images/",
+       scale = 1,
+       width = 6.5,
+       height = 5,
+       units = "in",
+       dpi = 300)
+
 ggsave("klay-thompson-shot-chart.pdf", 
        plot = thompson_shot_chart, 
        device = "pdf", 
@@ -105,7 +135,27 @@ ggsave("klay-thompson-shot-chart.pdf",
        units = "in",
        dpi = 300)
 
+ggsave("klay-thompson-shot-chart.png", 
+       plot = thompson_shot_chart, 
+       device = "png", 
+       path = "/Users/nishantmishra/workout01/images/",
+       scale = 1,
+       width = 6.5,
+       height = 5,
+       units = "in",
+       dpi = 300)
+
 ggsave("stephen-curry-shot-chart.pdf", 
+       plot = curry_shot_chart, 
+       device = "pdf", 
+       path = "/Users/nishantmishra/workout01/images/",
+       scale = 1,
+       width = 6.5,
+       height = 5,
+       units = "in",
+       dpi = 300)
+
+ggsave("stephen-curry-shot-chart.png", 
        plot = curry_shot_chart, 
        device = "pdf", 
        path = "/Users/nishantmishra/workout01/images/",
