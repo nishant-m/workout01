@@ -112,19 +112,39 @@ A veteran of 6 years, Green is without a doubt the heart and soul of this Warrio
 
 ![](https://github.com/nishant-m/workout01/blob/master/workout01/images/draymond-green-shot-chart.png?raw=true)
 
-
+##### Green Shot Tendencies
 ```{r}
 summarise(green, 
           Jump_Shots = nrow(filter(green, action_type == "Jump Shot")),
           Layup_Shots = nrow(filter(green, action_type == "Layup Shot")),
           Pullup_Jump_Shots = nrow(filter(green, action_type == "Pullup Jump shot")),
           Tip_Layup_Shots = nrow(filter(green, action_type == "Tip Layup Shot")),
-          Cutting_Dunk_Shot = nrow(filter(green, action_type == "Cutting Dunk Shot")),
+          Cutting_Dunk_Shot = nrow(filter(green, action_type == "Cutting Dunk Shot")))
 ```
 Here, analysis of our data shows the five most common tendencies of Green on offense. He takes a significant amount of jump shots. His low number of layup shots, pullup jump shots, and other shot attempts near the basket suggest that his role on offense is that of a fourth or fifth man. This makes sense with offensive powerhouses on the team like Durant, Curry, and Thompson. While we cannot ascertain this from the data, it is likely that, due to the gravity of these other players on the Warriors, Green often finds himself open on the floor with a clear jump shot, suggesting a possible reason for his very high number of attempted jumpshots.
 
+### Kevin Durant
+![](http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3202.png&w=350&h=254)
+
+In his 11th year in the League, Kevin Durant is one of the best offensive players of all time. The skills he posses are unprecedented - basketball has never seen a 7 footer that can dribble and move like a guard in the way that Durant can. To add to that, his shooting is not only servicable, it is absolutely **elite**. While the numbers at first glance may not seem otherworldly, his being the focal point on offense a lot of time makes every shot he takes tough. Below, we can look at his shot chart and his top shot tendencies.
+
+![](https://github.com/nishant-m/workout01/blob/master/workout01/images/kevin-durant-shot-chart.png?raw=true)
+
+##### Durant Shot Tendencies
+```{r}
+summarise(durant, 
+          Jump_Shots = nrow(filter(durant, action_type == "Jump Shot")),
+          Pullup_Jump_Shots = nrow(filter(durant, action_type == "Pullup Jump shot")),
+          Fadeaway_Jump_Shot = nrow(filter(durant, action_type == "Fadeaway Jump Shot")),
+          Layup_Shots = nrow(filter(durant, action_type == "Layup Shot")),
+          Driving_Layup_Shot = nrow(filter(durant, action_type == "Driving Layup Shot")),
+          Running_Layup_Shot = nrow(filter(durant, action_type == "Running Layup Shot")))
+```
+Here, analysis of Durant's tendencies only continues to support our ideas that he is an all-time-great. Like Draymond, he takes a very large amount of jump shots, which we can most likely attribute to being the way the offense of Golden State runs as well as a benefit of having so many offensive superstars on one team. The rest of his tendencies, however, are where we can recognize his greatness. With a very large number of pull up jump shots, Durant still manages to shoot 60.65% from 2 pointers and 38.60% from 3 - both incredible numbers for the volume and difficulty of the shots he takes. Considering the numbers of his fadeaway jump shots, driving layup shots, and running layup shots, his tendencies can be observed to be similar to that of a guard, and something that defenders must remain wary of.
+
 ### Sources
 http://www.espn.com/nba/player/_/id/6589/draymond-green
+http://www.espn.com/nba/player/_/id/3202/kevin-durant
 
 
 
