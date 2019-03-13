@@ -196,7 +196,7 @@ summarise(curry,
           Pullup_Jump_Shots = nrow(filter(curry, action_type == "Pullup Jump shot")),
           Step_Back_Jump_Shot = nrow(filter(curry, action_type == "Step Back Jump shot")),
           Layup_Shots = nrow(filter(curry, action_type == "Layup Shot")),
-          Driving_Layup_Shot = nrow(filter(thompson, action_type == "Driving Layup Shot")),
+          Driving_Layup_Shot = nrow(filter(curry, action_type == "Driving Layup Shot")),
           Floating_Jump_Shot = nrow(filter(curry, action_type == "Floating Jump shot")))
 ```
 

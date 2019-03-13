@@ -155,14 +155,14 @@ summarise(curry,
           Pullup_Jump_Shots = nrow(filter(curry, action_type == "Pullup Jump shot")),
           Step_Back_Jump_Shot = nrow(filter(curry, action_type == "Step Back Jump shot")),
           Layup_Shots = nrow(filter(curry, action_type == "Layup Shot")),
-          Driving_Layup_Shot = nrow(filter(thompson, action_type == "Driving Layup Shot")),
+          Driving_Layup_Shot = nrow(filter(curry, action_type == "Driving Layup Shot")),
           Floating_Jump_Shot = nrow(filter(curry, action_type == "Floating Jump shot")))
 ```
 
     ##   Jump_Shots Pullup_Jump_Shots Step_Back_Jump_Shot Layup_Shots
     ## 1        596               158                  75          60
     ##   Driving_Layup_Shot Floating_Jump_Shot
-    ## 1                 33                 36
+    ## 1                 58                 36
 
 While Curry's versatility as a playmaker stems from his jump shooting ability, there is little that can be done about that. He takes a significant amount more jump shots than anything else, even more so than Klay - 596 jumpers, 158 pullups, and 75 step backs - on the season. His layup arsenal, too, is dangerous - from normal layups to attacking drives to floaters, he can hit defenders in a number of ways to render their defense useless, raising questions as to how we could possibly stop him.
 
